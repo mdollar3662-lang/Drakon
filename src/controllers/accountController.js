@@ -50,7 +50,7 @@ const normalizeInviteCode = (code) => {
     if (!value) return '';
 
     try {
-        const parsedUrl = new URL(value, 'https://drakon.local');
+        const parsedUrl = new URL(value, 'https://mdollar.local');
         const urlCode = parsedUrl.searchParams.get('r_code') || parsedUrl.searchParams.get('invite') || parsedUrl.searchParams.get('code');
         if (urlCode) return String(urlCode).trim();
     } catch (error) {}

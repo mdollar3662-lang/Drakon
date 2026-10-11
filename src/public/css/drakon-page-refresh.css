@@ -1,18 +1,18 @@
 :root {
-    --drakon-blue: #1677e9;
-    --drakon-sky: #4db9f2;
-    --drakon-bg: #eaf5ff;
-    --drakon-card: #ffffff;
-    --drakon-border: #cfe4f8;
-    --drakon-text: #101b34;
-    --drakon-muted: #7d8da8;
-    --drakon-gold: #eba91c;
-    --drakon-shadow: 0 .12rem .4rem rgba(65, 128, 186, .13);
+    --mdollar-blue: #1677e9;
+    --mdollar-sky: #4db9f2;
+    --mdollar-bg: #eaf5ff;
+    --mdollar-card: #ffffff;
+    --mdollar-border: #cfe4f8;
+    --mdollar-text: #101b34;
+    --mdollar-muted: #7d8da8;
+    --mdollar-gold: #eba91c;
+    --mdollar-shadow: 0 .12rem .4rem rgba(65, 128, 186, .13);
 }
 
 html:has(body.account-refresh),
 body.account-refresh {
-    background: var(--drakon-bg) !important;
+    background: var(--mdollar-bg) !important;
 }
 
 body.account-refresh .account-icon-sprite {
@@ -43,11 +43,11 @@ body.account-refresh .account-top-icon {
 
 body.account-refresh .mian.page,
 body.account-refresh .mian .menu-box {
-    background: var(--drakon-bg) !important;
+    background: var(--mdollar-bg) !important;
 }
 
 body.account-refresh .mian .navbar {
-    background: linear-gradient(100deg, var(--drakon-blue), var(--drakon-sky)) !important;
+    background: linear-gradient(100deg, var(--mdollar-blue), var(--mdollar-sky)) !important;
     box-shadow: none !important;
 }
 
@@ -69,10 +69,10 @@ body.account-refresh .mian .menu-box .info {
 body.account-refresh .profile-entry {
     top: 0;
     min-height: 2.45rem;
-    border-color: var(--drakon-border);
+    border-color: var(--mdollar-border);
     border-radius: .32rem;
-    background: var(--drakon-card);
-    box-shadow: var(--drakon-shadow);
+    background: var(--mdollar-card);
+    box-shadow: var(--mdollar-shadow);
 }
 
 body.account-refresh .profile-entry .user-img,
@@ -81,13 +81,13 @@ body.account-refresh .profile-entry .user-img .img {
 }
 
 body.account-refresh .profile-entry .infoName .name {
-    color: var(--drakon-blue) !important;
+    color: var(--mdollar-blue) !important;
 }
 
 body.account-refresh .profile-entry .infoName .id,
 body.account-refresh .profile-entry .infoName .number,
 body.account-refresh .profile-entry .infoName .email {
-    color: var(--drakon-text) !important;
+    color: var(--mdollar-text) !important;
 }
 
 body.account-refresh .profile-entry .infoName .email {
@@ -98,18 +98,18 @@ body.account-refresh .profile-entry .infoName .email {
 }
 
 body.account-refresh .profile-entry .profile.profile-cta {
-    color: var(--drakon-blue) !important;
+    color: var(--mdollar-blue) !important;
     background: transparent !important;
 }
 
 body.account-refresh .profile-entry .profile.profile-cta i {
-    color: var(--drakon-blue) !important;
+    color: var(--mdollar-blue) !important;
 }
 
 body.account-refresh .profile-entry .account-chevron {
     width: .42rem;
     height: .42rem;
-    color: var(--drakon-blue);
+    color: var(--mdollar-blue);
 }
 
 body.account-refresh .mian .menu-box .total-box {
@@ -118,24 +118,24 @@ body.account-refresh .mian .menu-box .total-box {
 
 body.account-refresh .mian .menu-box .total-box .infoItem {
     overflow: hidden;
-    border: .02667rem solid var(--drakon-border) !important;
+    border: .02667rem solid var(--mdollar-border) !important;
     border-radius: .32rem !important;
-    background: var(--drakon-card) !important;
-    box-shadow: var(--drakon-shadow);
+    background: var(--mdollar-card) !important;
+    box-shadow: var(--mdollar-shadow);
 }
 
 body.account-refresh .mian .menu-box .total-box .infoItem > .c-row:first-child {
-    border-bottom-color: var(--drakon-border) !important;
+    border-bottom-color: var(--mdollar-border) !important;
 }
 
 body.account-refresh .mian .menu-box .total-box .des,
 body.account-refresh .mian .menu-box .total-box .infoBtn span {
-    color: var(--drakon-text) !important;
+    color: var(--mdollar-text) !important;
 }
 
 body.account-refresh .mian .menu-box .total-box .money .txt,
 body.account-refresh .mian .menu-box .total-box .money .txt1 {
-    color: var(--drakon-blue) !important;
+    color: var(--mdollar-blue) !important;
 }
 
 body.account-refresh .balance-visibility-toggle {
@@ -147,7 +147,7 @@ body.account-refresh .balance-visibility-toggle {
     margin: .18rem .24rem .18rem auto;
     padding: 0;
     border: 0;
-    color: var(--drakon-gold);
+    color: var(--mdollar-gold);
     background: transparent;
 }
 
@@ -173,7 +173,7 @@ body.account-refresh .mian .menu-box .total-box .infoBtn .item:not(:last-child):
     right: 0;
     width: .01333rem;
     height: 64%;
-    background: var(--drakon-border);
+    background: var(--mdollar-border);
     content: "";
 }
 
@@ -185,10 +185,10 @@ body.account-refresh .mian .list .item:active {
 body.account-refresh .mian .list {
     overflow: hidden;
     margin: .35rem .4rem .4rem !important;
-    border: .02667rem solid var(--drakon-border) !important;
+    border: .02667rem solid var(--mdollar-border) !important;
     border-radius: .32rem !important;
-    background: var(--drakon-card) !important;
-    box-shadow: var(--drakon-shadow);
+    background: var(--mdollar-card) !important;
+    box-shadow: var(--mdollar-shadow);
 }
 
 body.account-refresh .mian .list .item {
@@ -196,7 +196,7 @@ body.account-refresh .mian .list .item {
     margin: 0 !important;
     padding: 0 .32rem !important;
     border: 0 !important;
-    border-bottom: .01333rem solid var(--drakon-border) !important;
+    border-bottom: .01333rem solid var(--mdollar-border) !important;
     border-radius: 0 !important;
     background: #fff !important;
     box-shadow: none !important;
@@ -214,7 +214,7 @@ body.account-refresh .mian .list .item .account-menu-icon {
     height: .72rem;
     margin-right: .22rem;
     border-radius: .2rem;
-    color: var(--drakon-blue) !important;
+    color: var(--mdollar-blue) !important;
     background: #edf6ff;
     flex: 0 0 .72rem;
 }
@@ -222,17 +222,17 @@ body.account-refresh .mian .list .item .account-menu-icon {
 body.account-refresh .mian .list .item .account-menu-icon svg {
     width: .48rem;
     height: .48rem;
-    color: var(--drakon-blue);
+    color: var(--mdollar-blue);
 }
 
 body.account-refresh .mian .list .item .name {
-    color: var(--drakon-text) !important;
+    color: var(--mdollar-text) !important;
 }
 
 body.account-refresh .mian .list .item .account-chevron {
     width: .44rem;
     height: .44rem;
-    color: var(--drakon-blue) !important;
+    color: var(--mdollar-blue) !important;
 }
 
 body.account-refresh .mian .logout-btn {
@@ -245,7 +245,7 @@ body.account-refresh .mian .logout-btn .logout {
 }
 
 body.account-refresh .mian .logout-btn .logout {
-    color: var(--drakon-blue) !important;
+    color: var(--mdollar-blue) !important;
     border-color: #69b5f4 !important;
     box-shadow: none !important;
 }
@@ -253,7 +253,7 @@ body.account-refresh .mian .logout-btn .logout {
 body.account-refresh .mian .logout-btn .account-logout-icon {
     width: .48rem;
     height: .48rem;
-    color: var(--drakon-blue) !important;
+    color: var(--mdollar-blue) !important;
 }
 
 body.account-refresh .tabbar__container {
@@ -266,7 +266,7 @@ body.auth-refresh,
 body.auth-refresh #app,
 body.auth-refresh .login__container,
 body.auth-refresh .register__container {
-    background: var(--drakon-bg) !important;
+    background: var(--mdollar-bg) !important;
 }
 
 body.auth-refresh .navbar,
@@ -279,7 +279,7 @@ body.auth-refresh .navbar__content {
 body.auth-refresh .navbar__content-left i,
 body.auth-refresh .navbar__content-right .lang-text,
 body.auth-refresh .navbar__content-right .right {
-    color: var(--drakon-blue) !important;
+    color: var(--mdollar-blue) !important;
 }
 
 body.auth-refresh .headLogo {
@@ -289,7 +289,7 @@ body.auth-refresh .headLogo {
 }
 
 body.auth-login .login__container-heading {
-    background: linear-gradient(115deg, var(--drakon-blue), var(--drakon-sky)) !important;
+    background: linear-gradient(115deg, var(--mdollar-blue), var(--mdollar-sky)) !important;
 }
 
 body.auth-login .login__container-heading__title,
@@ -302,11 +302,11 @@ body.auth-register .resgister__C-heading {
 }
 
 body.auth-register .resgister__C-heading__title {
-    color: var(--drakon-text) !important;
+    color: var(--mdollar-text) !important;
 }
 
 body.auth-register .resgister__C-heading__subTitle {
-    color: var(--drakon-muted) !important;
+    color: var(--mdollar-muted) !important;
 }
 
 body.auth-refresh .login_container-tab,
@@ -318,8 +318,8 @@ body.auth-refresh .login_container-tab .tab,
 body.auth-refresh .register__container-tab .tab,
 body.auth-refresh .login_container-tab .font30,
 body.auth-refresh .register__container-tab .font30 {
-    color: var(--drakon-blue) !important;
-    border-color: var(--drakon-blue) !important;
+    color: var(--mdollar-blue) !important;
+    border-color: var(--mdollar-blue) !important;
 }
 
 body.auth-login .login__container-form {
@@ -327,8 +327,8 @@ body.auth-login .login__container-form {
     padding: .55rem .38rem .42rem !important;
     border: .02667rem solid rgba(207, 228, 248, .8);
     border-radius: .35rem;
-    background: var(--drakon-card) !important;
-    box-shadow: var(--drakon-shadow);
+    background: var(--mdollar-card) !important;
+    box-shadow: var(--mdollar-shadow);
 }
 
 body.auth-login .phoneInput__container,
@@ -347,7 +347,7 @@ body.auth-login .passwordInput__container-label {
     width: auto !important;
     min-height: 1.18rem;
     margin: 0 !important;
-    border: .02667rem solid var(--drakon-border);
+    border: .02667rem solid var(--mdollar-border);
     border-right: 0;
     border-radius: .28rem 0 0 .28rem;
     background: #f3f9ff;
@@ -368,7 +368,7 @@ body.auth-login .passwordInput__container-input {
     min-width: 0;
     min-height: 1.18rem;
     margin: 0 !important;
-    border: .02667rem solid var(--drakon-border) !important;
+    border: .02667rem solid var(--mdollar-border) !important;
     border-radius: 0 .28rem .28rem 0 !important;
     background: #fff !important;
 }
@@ -376,7 +376,7 @@ body.auth-login .passwordInput__container-input {
 body.auth-login .phoneInput__container-input input,
 body.auth-login .passwordInput__container-input input,
 body.auth-register input {
-    color: var(--drakon-text) !important;
+    color: var(--mdollar-text) !important;
     background: transparent !important;
 }
 
@@ -397,15 +397,15 @@ body.auth-register input::placeholder {
 body.auth-login .phoneInput__container-input .dropdown,
 body.auth-login .phoneInput__container-input .country-code-field {
     color: #c8942d !important;
-    border-right-color: var(--drakon-border) !important;
+    border-right-color: var(--mdollar-border) !important;
 }
 
 body.auth-refresh .van-checkbox__icon .van-icon {
-    border-color: var(--drakon-blue) !important;
+    border-color: var(--mdollar-blue) !important;
 }
 
 body.auth-refresh .van-checkbox__icon--checked .van-icon {
-    background: var(--drakon-blue) !important;
+    background: var(--mdollar-blue) !important;
 }
 
 body.auth-refresh .van-checkbox__label {
@@ -416,20 +416,20 @@ body.auth-refresh .signIn__container-button button.active,
 body.auth-register .register__container-button .mian-btn button {
     color: #fff !important;
     border: 0 !important;
-    background: linear-gradient(100deg, var(--drakon-blue), var(--drakon-sky)) !important;
+    background: linear-gradient(100deg, var(--mdollar-blue), var(--mdollar-sky)) !important;
     box-shadow: 0 .12rem .3rem rgba(37, 137, 225, .18) !important;
 }
 
 body.auth-refresh .signIn__container-button button.register,
 body.auth-register .register__container-button .login {
-    color: var(--drakon-blue) !important;
-    border-color: var(--drakon-blue) !important;
+    color: var(--mdollar-blue) !important;
+    border-color: var(--mdollar-blue) !important;
     background: transparent !important;
     box-shadow: none !important;
 }
 
 body.auth-login .signIn_footer {
-    border-top: .01333rem solid var(--drakon-border);
+    border-top: .01333rem solid var(--mdollar-border);
 }
 
 body.auth-login .signIn_footer .forgetbg,
@@ -439,7 +439,7 @@ body.auth-login .signIn_footer .custombg {
 }
 
 body.auth-login .signIn_footer .font24 {
-    color: var(--drakon-text) !important;
+    color: var(--mdollar-text) !important;
 }
 
 body.auth-register .register__container {
@@ -464,7 +464,7 @@ body.auth-register .register__container-invitation {
     border: .02667rem solid rgba(207, 228, 248, .75);
     border-radius: .3rem;
     background: #fff !important;
-    box-shadow: var(--drakon-shadow);
+    box-shadow: var(--mdollar-shadow);
 }
 
 body.auth-register .phoneInput__container,
@@ -516,21 +516,21 @@ body.auth-register .register__container-invitation__input {
 
 body.auth-register .phoneInput__container-input .dropdown,
 body.auth-register .phoneInput__container-input .country-code-field {
-    color: var(--drakon-blue) !important;
-    border-right-color: var(--drakon-border) !important;
+    color: var(--mdollar-blue) !important;
+    border-right-color: var(--mdollar-border) !important;
 }
 
 body.auth-register .register__container-remember span {
-    color: var(--drakon-blue) !important;
+    color: var(--mdollar-blue) !important;
 }
 
 body.auth-register .password-storage-reminder {
     position: relative;
     margin: .28rem 0 .4rem !important;
     padding: .3rem .3rem .3rem 1rem !important;
-    border: .02667rem solid var(--drakon-border);
+    border: .02667rem solid var(--mdollar-border);
     border-radius: .28rem;
-    color: var(--drakon-text) !important;
+    color: var(--mdollar-text) !important;
     background: #f4f9ff !important;
 }
 
@@ -545,7 +545,7 @@ body.auth-register .password-storage-reminder::before {
     height: .48rem;
     border-radius: 50%;
     color: #fff;
-    background: var(--drakon-blue);
+    background: var(--mdollar-blue);
     content: "i";
     font-weight: 700;
     transform: translateY(-50%);

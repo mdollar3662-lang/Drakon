@@ -74,7 +74,7 @@ const ensureGameRound = async (type, game, source = connection) => {
     if (!config) throw new Error(`Unsupported game period type: ${type}`);
 
     const client = await getClient(source);
-    const lockName = `drakon:period:${type}:${game}`;
+    const lockName = `mdollar:period:${type}:${game}`;
     let lockAcquired = false;
     try {
         const [lockRows] = await client.db.query('SELECT GET_LOCK(?, 5) AS acquired', [lockName]);

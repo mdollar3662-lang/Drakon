@@ -127,10 +127,10 @@ app.use((req, res, next) => {
 
         if (body.indexOf("â‚¹") !== -1) body = body.replace(/â‚¹/g, "₹");
 
-        if (body.includes("</body>") && !body.includes("data-drakon-currency-normalizer")) {
+        if (body.includes("</body>") && !body.includes("data-mdollar-currency-normalizer")) {
           body = body.replace(
             "</body>",
-            `<script data-drakon-currency-normalizer>
+            `<script data-mdollar-currency-normalizer>
 (function () {
   var keepDollarCurrency = /^\\/wallet\\/(?:recharge|withdrawal)(?:$|\\/)/.test(window.location.pathname) || /^\\/wallet\\/paynow\\/manual_usdt(?:$|\\/)/.test(window.location.pathname);
   if (keepDollarCurrency) return;

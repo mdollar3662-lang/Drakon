@@ -146,7 +146,7 @@ const createMockConnection = () => {
   const adminRows = [
     {
       id: 1,
-      app: "Drakon",
+      app: "Mdollar",
       telegram: "",
       cskh: "",
     },
