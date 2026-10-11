@@ -5,10 +5,12 @@ import connection from "../config/connectDB.js";
 
 const homePage = async (req, res) => {
     const [settings] = await connection.query('SELECT `app` FROM admin');
+    if (!settings || settings.length === 0) {
+        return res.render("home/index.ejs", { app: {} });
+    }
     let app = settings[0].app;
     return res.render("home/index.ejs", { app });
 }
-
 const checkInPage = async (req, res) => {
     return res.render("checkIn/checkIn.ejs");
 }

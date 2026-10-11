@@ -1,4 +1,4 @@
--- Best-effort MySQL schema inferred from application queries.
+﻿-- Best-effort MySQL schema inferred from application queries.
 -- This is a starter schema and may require adjustments for exact production parity.
 
 SET NAMES utf8mb4;
@@ -409,3 +409,14 @@ CREATE TABLE IF NOT EXISTS `referral_level_income` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 SET FOREIGN_KEY_CHECKS = 1;
+
+
+
+CREATE TABLE IF NOT EXISTS `game_access_settings` (
+  `id` TINYINT UNSIGNED NOT NULL,
+  `games_enabled` TINYINT(1) NOT NULL DEFAULT 0,
+  `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
