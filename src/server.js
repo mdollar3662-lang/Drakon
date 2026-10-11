@@ -337,7 +337,7 @@ if (!process.env.VERCEL) {
     }),
   }).catch(() => {});
   // #endregion
-  server.listen(port, () => {
+  server.listen(port, '0.0.0.0', () => {
     console.log("Connected success port: " + port);
   });
 }
