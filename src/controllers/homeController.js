@@ -1,7 +1,4 @@
 import connection from "../config/connectDB.js";
-// import jwt from 'jsonwebtoken'
-// import md5 from "md5";
-// import e from "express";
 
 const homePage = async (req, res) => {
     const [settings] = await connection.query('SELECT `app` FROM admin');
@@ -11,6 +8,7 @@ const homePage = async (req, res) => {
     let app = settings[0].app;
     return res.render("home/index.ejs", { app });
 }
+
 const checkInPage = async (req, res) => {
     return res.render("checkIn/checkIn.ejs");
 }
@@ -26,6 +24,8 @@ const checkRecord = async (req, res) => {
 const addBank = async (req, res) => {
     return res.render("wallet/addbank.ejs");
 }
+
+
 
 // promotion
 const promotionPage = async (req, res) => {
