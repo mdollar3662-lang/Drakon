@@ -515,9 +515,10 @@ const forgotPage = async (req, res) => {
 
 const login = async (req, res) => {
     let { username, pwd } = req.body;
-    username = cleanPhoneNumber(username);
+username = String(username).replace(/\D/g, '').slice(-10);
+username = cleanPhoneNumber(username);
 
-    if (!username || !pwd || !username) {//!isNumber(username)
+    if (!username || !pwd) {
         return res.status(200).json({
             message: 'ERROR!!!'
         });
