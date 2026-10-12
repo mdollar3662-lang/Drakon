@@ -16,6 +16,7 @@ let router = express.Router();
 
 const initWebRouter = (app) => {
         // TEMP USER CREATE - baad me hata dena
+      // TEMP USER CREATE - baad me hata dena
     router.get('/create-temp-user', async (req, res) => {
         try {
             const pool = await mysql.createPool({
@@ -25,11 +26,18 @@ const initWebRouter = (app) => {
                 password: process.env.DB_PASSWORD || process.env.MYSQLPASSWORD,
                 database: process.env.DB_NAME || process.env.MYSQLDATABASE || 'railway',
             });
-            await pool.execute("INSERT INTO users (phone, password, invite_code, own_code, money, status, veri, level) VALUES ('9876543210', MD5('123456'), 'BOOTSTRAP01', 'BOOTSTRAP011234', 5000, 1, 1, 1) ON DUPLICATE KEY UPDATE password=MD5('123456')");
+            // Table ke columns check karo - invite_code nahi invite/code hai
+            const ownCode = 'BOOTSTRAP01' + Math.floor(Math.random()*10000);
+            try {
+                await pool.execute("INSERT INTO users (phone, password, code, invite, money, status, veri, level) VALUES (?, ?, ?, ?, 5000, 1, 1, 1) ON DUPLICATE KEY UPDATE password=?", ['9876543210', 'e10adc3949ba59abbe56e057f20f883e', ownCode, 'BOOTSTRAP01', 'e10adc3949ba59abbe56e057f20f883e']);
+            } catch (e2) {
+                // agar code/invite bhi nahi to sirf phone/password
+                await pool.execute("INSERT INTO users (phone, password, invite_code, own_code) VALUES (?, MD5(?), ?, ?) ON DUPLICATE KEY UPDATE password=MD5(?)", ['9876543210', '123456', 'BOOTSTRAP01', ownCode, '123456']);
+            }
             await pool.end();
-            res.send('USER CREATED: 9876543210 / 123456');
+            res.send('USER CREATED: 9876543210 / 123456 - Login karo!');
         } catch (e) {
-            res.status(500).send('Error: ' + e.message);
+            res.status(500).send('Error: ' + e.message + ' | Stack: ' + e.stack);
         }
     });
     router.get('/keFuMenu', accountController.keFuMenu);
