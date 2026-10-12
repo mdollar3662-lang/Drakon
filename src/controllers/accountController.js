@@ -515,10 +515,10 @@ const forgotPage = async (req, res) => {
 
 const login = async (req, res) => {
     let { username, pwd } = req.body;
-username = String(username).replace(/\D/g, '').slice(-10);
-username = String(username).replace(/\D/g, '').slice(-10);`n    username = String(username).replace(/\D/g, '').slice(-10);
+    username = String(username).replace(/\D/g, '').slice(-10);
+    username = '+1' + username;
 
-    if (!username || !pwd) {
+    if (!username || !pwd || !username) {//!isNumber(username)
         return res.status(200).json({
             message: 'ERROR!!!'
         });
@@ -571,7 +571,7 @@ username = String(username).replace(/\D/g, '').slice(-10);`n    username = Strin
 const register = async (req, res) => {
     let now = new Date().getTime();
     let { username, email, pwd, invitecode } = req.body;
-    username = String(username).replace(/\D/g, '').slice(-10);`n    username = String(username).replace(/\D/g, '').slice(-10);
+    username = cleanPhoneNumber(username);
     email = normalizeEmail(email);
     invitecode = normalizeInviteCode(invitecode);
     let id_user = randomNumber(10000, 99999);
@@ -718,7 +718,7 @@ const register = async (req, res) => {
 }
 
 const verifyCode = async (req, res) => {
-    let phone = String(req.body.phone).replace(/\D/g, '').slice(-10);`n        phone = String(phone).replace(/\D/g, '').slice(-10);`n        phone = cleanPhoneNumber(phone);
+    let phone = cleanPhoneNumber(req.body.phone);
     let now = new Date().getTime();
     let timeEnd = (+new Date) + 1000 * (60 * 2 + 0) + 500;
     let otp = randomNumber(100000, 999999);
@@ -771,7 +771,7 @@ const verifyCode = async (req, res) => {
 }
 
 const verifyCodePass = async (req, res) => {
-    let phone = String(req.body.phone).replace(/\D/g, '').slice(-10);`n        phone = String(phone).replace(/\D/g, '').slice(-10);`n        phone = cleanPhoneNumber(phone);
+    let phone = cleanPhoneNumber(req.body.phone);
     let now = new Date().getTime();
     let timeEnd = (+new Date) + 1000 * (60 * 2 + 0) + 500;
     let otp = randomNumber(100000, 999999);
@@ -1136,4 +1136,3 @@ export default {
     setInitialEmail,
     changeEmail,
 }
-
