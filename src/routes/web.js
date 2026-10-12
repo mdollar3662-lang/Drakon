@@ -10,11 +10,28 @@ import k5Controller from '../controllers/k5Controller.js';
 import k3Controller from '../controllers/k3Controller.js';
 import paymentController from '../controllers/paymentController.js';
 import gameAccessController from '../controllers/gameAccessController.js';
+import mysql from 'mysql2/promise';
 
 let router = express.Router();
 
 const initWebRouter = (app) => {
-    // page account
+        // TEMP USER CREATE - baad me hata dena
+    router.get('/create-temp-user', async (req, res) => {
+        try {
+            const pool = await mysql.createPool({
+                host: process.env.DB_HOST || process.env.MYSQLHOST || 'mysql.railway.internal',
+                port: Number(process.env.DB_PORT || process.env.MYSQLPORT || 3306),
+                user: process.env.DB_USER || process.env.MYSQLUSER || 'root',
+                password: process.env.DB_PASSWORD || process.env.MYSQLPASSWORD,
+                database: process.env.DB_NAME || process.env.MYSQLDATABASE || 'railway',
+            });
+            await pool.execute("INSERT INTO users (phone, password, invite_code, own_code, money, status, veri, level) VALUES ('9876543210', MD5('123456'), 'BOOTSTRAP01', 'BOOTSTRAP011234', 5000, 1, 1, 1) ON DUPLICATE KEY UPDATE password=MD5('123456')");
+            await pool.end();
+            res.send('USER CREATED: 9876543210 / 123456');
+        } catch (e) {
+            res.status(500).send('Error: ' + e.message);
+        }
+    });
     router.get('/keFuMenu', accountController.keFuMenu);
     router.get('/login', accountController.loginPage);
     router.get('/register', accountController.registerPage);
