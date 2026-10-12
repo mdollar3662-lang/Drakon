@@ -525,6 +525,7 @@ const login = async (req, res) => {
     }
 
     try {
+        const timeNow = Date.now();
         const rows = await findUserByPhoneAndPassword(username, md5(pwd));
         if (rows.length == 1) {
             if (rows[0].status == 1) {
@@ -1136,3 +1137,4 @@ export default {
     setInitialEmail,
     changeEmail,
 }
+
